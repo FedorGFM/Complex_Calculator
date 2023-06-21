@@ -56,17 +56,11 @@ public class CalculatorView {
         ComplexNumber complexNumber = new ComplexNumber(Integer.parseInt(a), Integer.parseInt(b));
 
 
-        while (!input.matches("^\\d+\\+\\d+i$") /*&& !input.matches("^\\d+\\-\\d+i$")*/) {
+        while (!input.matches("^\\d+\\+\\d+i$")) {
             System.out.println("Число " + input + " не комплексное");
             System.out.print("Введите другое комплексное число: ");
             input = scanner.nextLine();
         }
-//        if (input.equals("^\\d+\\-\\d+i$")) {
-//            inputStr = input.split("\\-");
-//            a = inputStr[0];
-//            b = inputStr[1].split("i")[0];
-//            complexNumber = new ComplexNumber(Integer.parseInt(a), Integer.parseInt(b));
-//        }
         return complexNumber;
     }
 }
